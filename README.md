@@ -21,14 +21,14 @@ printopts=USER_DEFINED_LP_OPTIONS (default: "")
 
 After adoption of the configuration and service description, simply use 
 ```
-$ make install
+$ sudo make install
 ```
 
 to install program, configuration file and service description.
 
 Now use 
 ```
-make start/stop/status
+$ sudo make start/stop/status
 ```
 to start or stop the service or retrieve it's status from systemd.
 

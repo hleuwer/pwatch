@@ -1,0 +1,11 @@
+[Unit]
+Description=Print Watcher
+After=network.target
+Documentation=https://github.com/hleuwer/pwatch/README.md
+
+[Service]
+ExecStart=/usr/local/bin/pwatch
+User=root
+
+[Install]
+WantedBy=multi-user.target
