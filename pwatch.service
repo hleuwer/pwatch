@@ -1,7 +1,7 @@
 [Unit]
 Description=Print Watcher
 After=network.target
-Documentation=https://github.com/hleuwer/pwatch/README.md
+Documentation=https://cloud.hebbie.de/docs/pwatch.html
 
 [Service]
 ExecStart=/usr/local/bin/pwatch
