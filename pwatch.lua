@@ -1,14 +1,18 @@
 #!/usr/bin/env lua
 local notify = require "inotify"
 local pretty = require "pl.pretty"
+local logging = require "logging"
 require "logging.rolling_file"
 local conf = loadfile("/etc/pwatch.conf")()
 local wdname = conf.wdname
 local logfilename = conf.logfilename
 local printopts = conf.printopts
 local fmt = string.format
-local logger = logging.rolling_file(logfilename, 32*1024, 5)
-
+local logger = logging.rolling_file{
+	filename = logfilename,
+	maxFileSize = 32*1024,
+	maxBackupIndex = 5
+}
 local function usage(args)
    print([[
 usage: pwatch OPTIONS
