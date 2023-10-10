@@ -9,6 +9,7 @@ INSTALL_DOCS=/var/www/html/docs
 
 .PHONY: install uninstall start
 install: 
+	cp -f $(PROGRAM).lua $(PROGRAM)
 	cp $(PROGRAM) $(INSTALL_BIN)
 	cp $(SERVICE) $(INSTALL_SERVICE)
 	cp $(CONFIG) $(INSTALL_CONFIG)

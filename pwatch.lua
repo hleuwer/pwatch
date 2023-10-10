@@ -45,7 +45,8 @@ local function main(args)
    while true do
       local events = handle:read()
       for _, ev in ipairs(events) do
-         if ev.mask == notify.IN_MOVED_TO then
+         if ev.mask == notify.IN_MOVED_TO or 
+            ev.mask == notify.IN_CREATE then
             local t = {
                "lp",
                printopts,
